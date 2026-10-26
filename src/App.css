@@ -1,0 +1,52 @@
+.app-shell {
+  width: min(100% - 32px, 1040px);
+  margin: 0 auto;
+  padding: 48px 0 64px;
+}
+
+.app-header { margin-bottom: 28px; }
+.eyebrow { color: #6754d9; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+.app-header h1 { margin: 8px 0; color: #20223d; font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: -0.05em; }
+.app-header p:last-child { color: #666b83; }
+.post-form, .post-card { background: #fff; border: 1px solid #e8e9f2; border-radius: 16px; box-shadow: 0 10px 30px rgba(48, 47, 91, 0.07); }
+.post-form { display: grid; gap: 14px; padding: 22px; margin-bottom: 18px; }
+.post-form h2 { margin: 0; font-size: 1rem; }
+.post-form label { display: grid; gap: 6px; color: #60647b; font-size: 0.82rem; font-weight: 600; }
+input, textarea { width: 100%; box-sizing: border-box; border: 1px solid #dfe1ed; border-radius: 9px; color: #24263c; background: #fcfcff; font: inherit; padding: 11px 12px; }
+textarea { resize: vertical; }
+input:focus, textarea:focus { outline: 3px solid rgba(103, 84, 217, .18); border-color: #6754d9; }
+button { border: 0; border-radius: 8px; padding: 9px 14px; color: #fff; background: #6754d9; cursor: pointer; font: inherit; font-weight: 700; }
+button:hover:not(:disabled) { background: #5442c2; }
+button:disabled { cursor: not-allowed; opacity: .55; }
+.search-wrap { position: relative; margin-bottom: 22px; }
+.search-wrap label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
+.search-status { position: absolute; right: 12px; top: 11px; color: #6754d9; font-size: .78rem; }
+.error-message { padding: 12px 14px; border-radius: 8px; color: #9c2c3d; background: #fff0f2; }
+.loading-message, .empty-message { padding: 48px 0; color: #6b6f85; text-align: center; }
+.posts-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+.posts-heading h2 { margin: 0; color: #292b46; font-size: 1.2rem; }
+.posts-heading span { color: #81869c; font-size: .85rem; }
+.posts-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.post-card { padding: 20px; }
+.post-card h2 { margin: 0 0 12px; color: #292b46; font-size: 1.05rem; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tags span { border-radius: 999px; padding: 3px 8px; color: #6754d9; background: #efedff; font-size: .72rem; }
+.post-stats { display: flex; gap: 8px; margin: 16px 0; color: #858aa0; font-size: .85rem; }
+.post-actions { display: flex; gap: 8px; }
+.secondary-button { color: #6754d9; background: #efedff; }
+.secondary-button:hover:not(:disabled) { background: #e2defe; }
+.danger-button { color: #c13d52; background: #fff0f2; }
+.danger-button:hover:not(:disabled) { background: #ffe0e5; }
+.pagination { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 26px; }
+.pagination span { color: #686d83; font-size: .9rem; }
+.modal-backdrop { position: fixed; inset: 0; z-index: 10; display: grid; place-items: center; padding: 20px; background: rgba(26, 28, 54, .52); }
+.details-modal { position: relative; width: min(100%, 620px); max-height: 85vh; overflow: auto; padding: 28px; border-radius: 18px; background: #fff; box-shadow: 0 20px 60px rgba(0, 0, 0, .2); }
+.details-modal h2 { margin: 0 36px 12px 0; color: #292b46; }
+.details-modal h3 { margin-top: 26px; color: #292b46; font-size: 1rem; }
+.details-body { color: #62677c; line-height: 1.7; }
+.close-button { position: absolute; top: 14px; right: 14px; padding: 3px 10px; color: #666b83; background: #f0f1f7; font-size: 1.4rem; line-height: 1; }
+.comments-list { display: grid; gap: 12px; padding: 0; list-style: none; }
+.comments-list li { display: grid; gap: 3px; padding: 12px; border-radius: 9px; background: #f7f7fb; }
+.comments-list strong { color: #6754d9; font-size: .85rem; }
+.comments-list span { color: #62677c; font-size: .9rem; }
+@media (max-width: 640px) { .app-shell { width: min(100% - 24px, 1040px); padding-top: 28px; } .posts-grid { grid-template-columns: 1fr; } .app-header h1 { font-size: 2.4rem; } }
